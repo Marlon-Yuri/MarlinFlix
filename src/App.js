@@ -1,8 +1,10 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route,Link} from "react-router-dom";
 import Movies from './pages/Movies/Movies'
+import Shows from './pages/Shows/Shows'
+import Home from './pages/Home/Home'
 import styled, {createGlobalStyle} from 'styled-components';
- 
+
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -14,10 +16,10 @@ const GlobalStyle = createGlobalStyle`
 const Header = styled.header`
 width: 100%;
 height: 13vh;
-border: solid;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
+background-color: gray;
 `
 const LinkBox = styled.nav`
 border: solid;
@@ -48,7 +50,8 @@ export default function App() {
       
       <LinkBox>
        <ul>
-         <Link to ='home'><li>Home</li></Link>
+         <Link to ='/'><li>Home</li></Link>
+         <Link to ='/shows'><li>Tv Shows</li></Link>
          <Link to ='/movies'><li>Top rated Movies</li></Link>
        </ul>
       </LinkBox>
@@ -56,8 +59,9 @@ export default function App() {
  
 
     <Routes>
-      <Route path='/' element={''}/>
+      <Route path='/' element={<Home/>}/>
       <Route path='/movies' element={<Movies/>}/>
+      <Route path='/shows' element={<Shows/>}/>
     </Routes>
 
      

@@ -1,5 +1,4 @@
 import axios from "axios";
-import styled from "styled-components";
 import React, { Component } from "react";
  
 
@@ -12,9 +11,8 @@ export default class Movies extends Component {
     movies: [],
     filterItem: []
   };
-  componentDidMount() {
-    this.getMovies();
-  }
+
+
   getMovies = async () => {
     const response = await MoviesApi.get();
     const allmovies = response.data.results.map((item) => {
@@ -26,20 +24,20 @@ export default class Movies extends Component {
 
     this.setState({
       movies: allmovies,
-      filterItem: allmovies
+     filterItem: allmovies   // --- PRA DEIXAR JÁ APARECENDO 
     });
     console.log(allmovies);
   };
 
+
+  componentDidMount() {
+    this.getMovies();
+  }
   
   handleChange = (event) => {
     const { movies } = this.state;
-    if (event.target.value === "") {
-      this.setState({
-        filterItem: movies
-      });
-      return;
-    }
+  
+    // eslint-disable-next-line array-callback-return
     const filterItemConvert = movies.filter((item) => {
       if (
         item.original_title
@@ -53,6 +51,19 @@ export default class Movies extends Component {
     this.setState({
       filterItem: filterItemConvert
     });
+
+
+
+
+
+    
+    // if (event.target.value === "") {
+    //   this.setState({
+    //     filterItem: movies
+    //   });
+    //   return;
+    // }
+
   };
 
   render() {
