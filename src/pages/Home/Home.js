@@ -8,7 +8,7 @@ import Modal from 'react-modal'
 
 const Main = styled.main`
 width: 100%;
-height: 87vh;
+height: 100%;
 position: absolute;
 background-image: url(${Image});
 //filter: blur(5px);
@@ -51,8 +51,8 @@ justify-content: center;
  
 `
 const Img = styled.img`
-width: 11vw;
-height: 25vh;
+width: 13vw;
+height: 28vh;
 border-radius: 50%;
 background-image: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
 `
@@ -96,28 +96,38 @@ justify-content: space-around;
 
 const MainTitle = styled.div`
 position: absolute;
-left: 5%;
-top: 17%;
+left: 3%;
+top: 13%;
 margin-left: -3%;
+width: 40vw;
+height: 87vh;
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 h1{
   color: white;
+  margin-top: 16%;
+  margin-left:4%;
   font-size:5vw;
 }
 h3{
   color: white;
+  margin-left:4%;
   font-size:3vw;
+}
+&:hover{
+  opacity: 80%;
 }
 `
 const BtnOpen = styled.button`
-width: 13vw;
-height: 7vh;
-font-size: 2vw;
+width: 14vw;
+height: 8vh;
+font-size: 2.3vw;
 color: white;
 background-color: #7A67EE;
 font-family: 'Bebas Neue', cursive;
 cursor: pointer;
+border-radius: 13%;
 &:hover{
-  font-size: 2.5vw;
+  font-size: 2.8vw;
   color: black
    
 }
