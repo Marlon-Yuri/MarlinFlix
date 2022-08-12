@@ -123,6 +123,7 @@ height: 8vh;
 font-size: 2.3vw;
 color: white;
 background-color: #7A67EE;
+margin-top: 10%;
 font-family: 'Bebas Neue', cursive;
 cursor: pointer;
 border-radius: 13%;

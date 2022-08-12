@@ -44,6 +44,12 @@ display: flex;
 justify-content: space-evenly;
 align-items: center; 
 }
+li{
+  &:hover{
+    color: red;
+    transition: 1s;
+  }
+}
 `
 const TitleBox = styled.div`
 border: solid;
